@@ -29,11 +29,14 @@ describe("Pharmacy", () => {
     ]);
   });
 
-  it("falls back to the regular drug behaviour for an unknown drug", () => {
-    expect(
-      new Pharmacy([new Drug("Unknown Drug", 10, 20)]).updateBenefitValue(),
-    ).toEqual([new Drug("Unknown Drug", 9, 19)]);
-  });
+  it.each(["Unknown Drug", "constructor"])(
+    "falls back to the regular drug behaviour for %p",
+    (name) => {
+      expect(
+        new Pharmacy([new Drug(name, 10, 20)]).updateBenefitValue(),
+      ).toEqual([new Drug(name, 9, 19)]);
+    },
+  );
 
   it("matches the committed output.json over 30 days", () => {
     const pharmacy = new Pharmacy([

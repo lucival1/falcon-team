@@ -1,5 +1,5 @@
 import { DrugRule } from "./drugRule";
-import { MIN_BENEFIT } from "../constants";
+import { MIN_BENEFIT } from "../shared/constants";
 
 export class FervexRule extends DrugRule {
   updateBenefit(drug, expired) {

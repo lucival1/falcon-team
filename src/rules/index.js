@@ -1,4 +1,4 @@
-import { DRUG_NAMES } from "../constants";
+import { DRUG_NAMES } from "../shared/constants";
 import { DrugRule } from "./drugRule";
 import { FervexRule } from "./fervexRule";
 import { HerbalTeaRule } from "./herbalTeaRule";

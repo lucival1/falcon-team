@@ -1,6 +1,6 @@
-import { MAX_BENEFIT, MIN_BENEFIT } from "../constants";
+import { MAX_BENEFIT, MIN_BENEFIT } from "../shared/constants";
 
-import { clamp } from "../clamp";
+import { clamp } from "../shared/clamp";
 
 export class DrugRule {
   update(drug) {

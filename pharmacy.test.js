@@ -93,6 +93,12 @@ describe("Herbal Tea", () => {
       expected: { expiresIn: -1, benefit: 50 },
     },
   ])("$label", behavesAs("Herbal Tea"));
+
+  it("normalises a benefit above 50 down to the maximum", () => {
+    expect(updateOnce("Herbal Tea", 10, 60)).toEqual(
+      new Drug("Herbal Tea", 9, 50),
+    );
+  });
 });
 
 describe("Fervex", () => {

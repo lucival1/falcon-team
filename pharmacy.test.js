@@ -19,6 +19,7 @@ describe("Pharmacy", () => {
       new Drug("Herbal Tea", 5, 10),
       new Drug("Fervex", 5, 10),
       new Drug("Magic Pill", 5, 10),
+      new Drug("Dafalgan", 5, 10),
     ];
 
     expect(new Pharmacy(drugs).updateBenefitValue()).toEqual([
@@ -26,6 +27,7 @@ describe("Pharmacy", () => {
       new Drug("Herbal Tea", 4, 11),
       new Drug("Fervex", 4, 13),
       new Drug("Magic Pill", 5, 10),
+      new Drug("Dafalgan", 4, 8),
     ]);
   });
 
